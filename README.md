@@ -22,7 +22,7 @@ OpenCV
 Face Recognition (face_recognition library)
 NumPy
 CSV
-datetime
+DateTime
 📥 Installation
 To set up this project locally, follow these steps:
 
@@ -34,11 +34,11 @@ git clone https://github.com/yourusername/face-recognition-attendance.git
 cd face-recognition-attendance
 Install Required Packages: Make sure you have Python installed, then install the necessary libraries:
 ```
-bash
+``` bash
 Copy code
 pip install opencv-python face_recognition numpy
 Prepare Face Images: Create a directory named faces and add images of known individuals you want to recognize, named appropriately (e.g., shashank.jpg, harry.png).
-
+```
 🏁 Usage
 Run the application:
 
@@ -47,17 +47,17 @@ Copy code
 python attendance.py
 The webcam will activate, and the program will start recognizing faces.
 
-When a recognized face is detected, it will display the name along with a "Present" message on the video feed.
+When a recognized face is detected, the video feed displays the name along with a "Present" message.
 
 The attendance will be logged in a CSV file named after the current date.
 
 ## 📝 Code Explanation
 The program captures video input using OpenCV.
 It loads known face encodings from image files.
-For each frame captured, it detects faces and compares them with the known encodings.
+It detects faces and compares each frame captured with the known encodings.
 If a match is found, the student's name is displayed and logged in a CSV file.
 
 ## 🔑 Key Components
 Face Recognition: Utilizes face_recognition library for detecting and encoding faces.
 Attendance Logging: Logs the name and time of presence in a CSV file.
-Real-time Video Capture: Uses OpenCV to display the video feed and recognize faces.
+Real-time Video Capture: OpenCV is used to display the video feed and recognize faces.
